@@ -1,0 +1,153 @@
+/* Configurações globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Fundo da tela com gradiente de azuis */
+body {
+    background: linear-gradient(135deg, #003366, #1a1a2e, #4c6a92);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: white;
+}
+
+/* Header */
+.header {
+    width: 100%;
+    background-color: #1a1a2e;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.header .logo h2 {
+    margin-left: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+    margin-right: 20px;
+}
+
+.nav ul li {
+    margin: 0 15px;
+}
+
+.nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav ul li a:hover {
+    background-color: #007bff;
+}
+
+.nav ul li a.active {
+    background-color: #0056b3;
+}
+
+/* Conteúdo principal */
+.main-content {
+    width: 90%;
+    max-width: 1200px;
+    margin-top: 40px;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.content-box {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Tabelas */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.table th, .table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+.table th {
+    background-color: #333;
+}
+
+.table tr:hover {
+    background-color: #444;
+}
+
+/* Botões */
+.btn {
+    padding: 12px 20px;
+    margin: 10px 0;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-edit {
+    background-color: #ffc107;
+    color: white;
+}
+
+.btn-edit:hover {
+    background-color: #e0a800;
+}
+
+.btn-delete {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-delete:hover {
+    background-color: #c82333;
+}
+
+.btn-add {
+    display: inline-block;
+    background-color: #28a745;
+    color: white;
+    padding: 12px 20px;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.btn-add:hover {
+    background-color: #218838;
+}

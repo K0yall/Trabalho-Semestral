@@ -1,0 +1,196 @@
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #003366; /* Azul escuro para o fundo */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.dashboard-container {
+    width: 90%;
+    max-width: 1400px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    text-align: center;
+    color: white;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.5); /* Cor escura sem opacidade total */
+    color: white;
+    width: 30%;
+    min-width: 280px; /* Tamanho mínimo do card */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px); /* Efeito blur */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    text-decoration: none; /* Remove o sublinhado do link */
+}
+
+.card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.7); /* Aumenta a opacidade no hover */
+}
+
+.card:active {
+    transform: translateY(0); /* Retorna à posição original após o clique */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.8); /* Aumenta a sombra quando o card for pressionado */
+    background-color: rgba(0, 0, 0, 0.8); /* Escurece o fundo durante o clique */
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 1.1rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Botões de Ação */
+.btn-action {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #0066cc; /* Azul claro */
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-action:hover {
+    background-color: #004999; /* Azul mais escuro */
+}
+
+.actions {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.questions-list, .answers-list {
+    margin-top: 30px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    background-color: #f4f4f4;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* Estilo para botões de ação em perguntas e respostas */
+.actions button {
+    padding: 10px 20px;
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.actions button:hover {
+    background-color: #e65c00;
+}
+
+/* Estilos de formulário */
+form {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"], input[type="number"], textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 100px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #004999;
+}
+
+li {
+    background-color: #fff;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease;
+}
+
+li:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
