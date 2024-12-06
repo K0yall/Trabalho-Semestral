@@ -1,0 +1,242 @@
+/* Estilos gerais */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #003366, #1a1a2e, #4c6a92); /* Fundo com gradiente */
+    color: white;
+}
+
+/* Estilos para o cabeçalho do dashboard */
+.dashboard-header {
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    animation: fadeIn 1s ease-in-out;
+    border-bottom: 2px solid #28a745;
+}
+
+.dashboard-header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* Animação para o cabeçalho */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Navegação */
+.dashboard-header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0 0;
+}
+
+.dashboard-header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.dashboard-header nav ul li a {
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.dashboard-header nav ul li a:hover {
+    color: #28a745;
+    transform: translateY(-2px);
+}
+
+/* Container principal */
+.dashboard-container {
+    padding: 30px;
+    max-width: 1200px;
+    margin: 40px auto;
+    background-color: rgba(0, 0, 0, 0.85);
+    border-radius: 15px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Títulos */
+h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Estatísticas Gerais */
+.statistics-box {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.stat-item {
+    background-color: #222;
+    padding: 25px;
+    border-radius: 15px;
+    width: 48%;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #333;
+}
+
+.stat-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    border-color: #28a745;
+}
+
+.stat-item h3 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    color: #28a745;
+}
+
+.stat-item p {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* Lista de perguntas */
+.questions-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.question-box {
+    background-color: #222;
+    padding: 25px;
+    border-radius: 15px;
+    width: 48%; /* Garantir que cada pergunta ocupe 48% da largura */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    border: 1px solid #333;
+}
+
+.question-box h3 {
+    font-size: 1.6rem;
+    color: #f4f4f4;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.question-box p {
+    font-size: 1.1rem;
+    color: #ddd;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+.question-box p strong {
+    color: #28a745;
+    font-weight: bold;
+}
+
+/* Formulário para criar perguntas */
+form {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+form label {
+    font-size: 1.2rem;
+    color: #ddd;
+    display: block;
+    margin-bottom: 10px;
+}
+
+form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #333;
+    margin-bottom: 15px;
+    background-color: #333;
+    color: white;
+}
+
+form input[type="text"]:focus {
+    border-color: #28a745;
+    outline: none;
+    background-color: #444;
+}
+
+form .submit-button-main {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+form .submit-button-main:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* Rodapé */
+footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .stat-item, .question-box {
+        width: 100%;
+    }
+
+    .dashboard-header h1 {
+        font-size: 2rem;
+    }
+
+    .dashboard-header nav ul li {
+        margin: 0 10px;
+    }
+
+    .dashboard-header nav ul li a {
+        font-size: 1rem;
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .question-box {
+        width: 100%;  /* Em telas menores, cada pergunta ocupa 100% da largura */
+    }
+}
